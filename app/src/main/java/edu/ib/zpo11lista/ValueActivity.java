@@ -20,15 +20,26 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
 
+/**
+ * Value activity class calculating value of Polynomial object
+ */
 public class ValueActivity extends AppCompatActivity {
     public static final String EQUATION_EXTRA="equation";
 
+    /**
+     * Method onCreate
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_value);
     }
 
+    /**
+     * Method calculating value of Polynomial expression
+     * @param view
+     */
     public void calculateOnClick(View view) {
         Intent intent=getIntent();
 

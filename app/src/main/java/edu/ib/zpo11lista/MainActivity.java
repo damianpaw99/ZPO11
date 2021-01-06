@@ -7,14 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * Main Activity class
+ */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * Method onCreate
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
+    /**
+     * Method changing Activity to ValueActivity
+     * @param view
+     */
     public void onValueClick(View view) {
         TextView equText= (TextView) findViewById(R.id.etxtInput);
         String equation = equText.getText().toString();
@@ -26,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Method changing Activity to DerivativeActivity
+     * @param view
+     */
     public void onDerivativeClick(View view) {
         TextView equText= (TextView) findViewById(R.id.etxtInput);
         String equation = equText.getText().toString();
@@ -36,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+    /**
+     * Method checking if String contains letter
+     * @param s String
+     * @return Boolean value
+     */
     private boolean check(String s) {
       for (int i = 0; i < s.length(); i++) {
             if (Character.isLetter(s.charAt(i))) {

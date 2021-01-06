@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -17,10 +16,17 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
 
+/**
+ * Derivative Activity class calculating derivative
+ */
 public class DerivativeActivity extends AppCompatActivity {
 
     public static final String EQUATION_EXTRA="equation";
 
+    /**
+     * Method onCreate - calculating derivative
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +39,6 @@ public class DerivativeActivity extends AppCompatActivity {
         StringBuilder response =new StringBuilder();
         String url= "https://newton.now.sh/api/v2/derive/"+p.toString();
 
-        //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        //StrictMode.setThreadPolicy(policy);
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
