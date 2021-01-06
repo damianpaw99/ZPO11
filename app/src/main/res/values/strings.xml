@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ZPO11Lista</string>
+    <string name="btnValue">Wartość</string>
+    <string name="btnDerivative">Pochodna</string>
+    <string name="calculatetxt">Podaj wartość x</string>
+    <string name="calculatebtn">Oblicz</string>
+</resources>
